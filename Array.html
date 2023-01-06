@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What should you eat click button to find out!!!</title>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<button type="button" id="playBtn">
+<div id = box></div>
+<script type="text/javascript">
+	var food = ["cake", "blt", "Taco", "smoothie", "burger", "Potato Chips", "Donuts", "Ice Cream", "Chicken Tenders", "pizza", "Oreo Cookies", "French Fries", "Hot Dogs"]
+	document.addEventListener("click", function(){
+    var random = Math.round(Math.random()*12)
+    box.innerText=(food[random])
+})
+
+</script>
+</body>
+</html>
