@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+		#pic{
+			width: 900px;
+			height: 600px;
+			filter: hue-rotate(190deg);
+		}
+		
+
+
+	</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+	document.addEventListener(
+		"mousemove", function(placeholder){
+			console.log(placeholder.clientX,
+				placeholder.ClientY)
+
+			document.body.style.backgroundColor="rgb(0,"+placeholder.clientX+","+placeholder.clientY+")"
+			<img src="yeat carti.jpg" id=pic>
+	})
+
+</script>
+</body>
+</html>
