@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      width: 400px;
+      height: 300px;
+      background-color: pink;
+      text-align: center;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px #888888;
+      margin: auto;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: red;
+      text-shadow: 2px 2px #888888;
+    }
+
+    p {
+      font-size: 20px;
+      color: white;
+      text-shadow: 1px 1px #888888;
+      margin-top: 30px;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 50px);
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: pulse 1s ease-out infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      background-color: red;
+      border-radius: 50% 50% 0;
+      top: 0;
+      left: 50px;
+      width: 50px;
+      height: 80px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart:after {
+      left: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Valentine's Day!</h1>
+    <p>Sending you all my love on this special day!</p>
+    <div class="heart"></div>
+  </div>
+</body>
+</html>

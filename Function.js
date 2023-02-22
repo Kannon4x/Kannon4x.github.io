@@ -13,7 +13,7 @@
     '🦖',
     '🍎',
     '😂',
-    '🖕',
+    '⚽️',
   ];
   const doors = document.querySelectorAll('.door');
   
