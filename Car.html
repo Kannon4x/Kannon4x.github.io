@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <style>
+      #buggy {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        left: 10px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="buggy"></div>
+
+    <script type="text/javascript">
+      buggy.style.left = "0px";
+
+      var x = parseInt(buggy.style.left);
+
+      document.addEventListener("keydown", function (event) {
+        console.log(x);
+        x = x + 10;
+
+        buggy.style.left = x + "px";
+      });
+    </script>
+  </body>
+</html>

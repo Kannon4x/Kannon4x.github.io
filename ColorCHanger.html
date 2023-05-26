@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<style type="text/css">
-		#pic{
-			width: 900px;
-			height: 600px;
-/*			filter: hue-rotate(190deg);*/
-		}
-
-
-
-	</style>
-</head>
-<body>
-
-	<img src="yeat carti.jpg" id=pic>
-	<script type="text/javascript">
-		pic.addEventListener("mousemove", function(event){
-			pic.style.filter = "hue-rotate(" +event.clientX+"deg)";
-		})
-
-
-		
-
-
-	</script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      #pic {
+        width: 900px;
+        height: 600px;
+        /*			filter: hue-rotate(190deg);*/
+      }
+    </style>
+  </head>
+  <body>
+    <img src="yeat carti.jpg" id="pic" />
+    <script type="text/javascript">
+      pic.addEventListener("mousemove", function (event) {
+        pic.style.filter = "hue-rotate(" + event.clientX + "deg)";
+      });
+    </script>
+  </body>
 </html>

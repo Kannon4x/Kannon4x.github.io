@@ -1,0 +1,20 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #333;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+  }
+  
