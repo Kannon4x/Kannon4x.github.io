@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("Gang.jpg");
+        background-size: cover; /* Adjust as needed */
+      }
+
+      #spacer {
+        height: 400px; /* Spacer to simulate scrolling */
+      }
+
+      #character {
+        position: absolute;
+        /* top: 100px; */
+        /* left: 100px; */
+        width: 300px;
+        height: 300px;
+        /* background-color: red; */
+        background-image: url(IMG_8408.png);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The crowd wants an encore</h1>
+
+    <div id="character"></div>
+
+    <div id="spacer"></div>
+
+    <div id="myDiv"></div>
+
+    <script>
+      // Get the character element
+      const character = document.getElementById("character");
+
+      // Set initial position
+      let x = 50;
+      let y = 50;
+
+      // Function to update character position
+      function updateCharacterPosition() {
+        character.style.left = x + "px";
+        character.style.top = y + "px";
+      }
+
+      // Function to handle arrow key press
+      function handleKeyPress(event) {
+        const key = event.key;
+        const step = 10; // Set the step size for character movement
+
+        // Move character based on the arrow key pressed
+        switch (key) {
+          case "ArrowUp":
+            y -= step;
+            break;
+          case "ArrowDown":
+            y += step;
+            break;
+          case "ArrowLeft":
+            x -= step;
+            break;
+          case "ArrowRight":
+            x += step;
+            break;
+        }
+
+        // Update character position on the screen
+        updateCharacterPosition();
+      }
+
+      // Event listener for arrow key press
+      document.addEventListener("keydown", handleKeyPress);
+
+      const myDiv = document.getElementById("myDiv");
+
+      // Function to check if the div has reached a certain position
+      function checkPosition() {
+        const triggerPosition = 60; // The position at which the link should be triggered
+
+        // Get the current scroll position
+        const divLeftPosition = myDiv.getBoundingClientRect().left;
+
+        // Check if the scroll position has reached the trigger position
+        if (divLeftPosition <= triggerPosition) {
+          // Redirect to the desired link
+          window.location.href = "https://youtu.be/BgE-TrFU6Mg?t=773";
+        }
+      }
+
+      // Event listener for scrolling
+      window.addEventListener("scroll", checkPosition);
+    </script>
+  </body>
+</html>

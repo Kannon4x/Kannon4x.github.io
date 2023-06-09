@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Div Trigger Link Example</title>
+    <style>
+      body {
+        height: 2000px; /* Just for demonstration purposes */
+      }
+
+      #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: left 0.5s; /* Optional: Adds a smooth transition */
+      }
+
+      #spacer {
+        height: 400px; /* Spacer to simulate scrolling */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll to the left</h1>
+
+    <div id="spacer"></div>
+
+    <div id="myDiv"></div>
+
+    <script>
+      const myDiv = document.getElementById("myDiv");
+
+      // Function to check if the div has reached a certain position to the left
+      function checkPosition() {
+        const triggerPosition = 10; // The position at which the link should be triggered (to the left)
+
+        // Get the current left position of the div
+        const divLeftPosition = myDiv.getBoundingClientRect().left;
+
+        // Check if the div has reached the trigger position to the left
+        if (divLeftPosition <= triggerPosition) {
+          // Redirect to the desired link
+          window.location.href = "https://www.example.com";
+        }
+      }
+
+      // Event listener for scrolling
+      window.addEventListener("scroll", checkPosition);
+    </script>
+  </body>
+</html>
